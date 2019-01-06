@@ -115,7 +115,7 @@
   Kafka only provides a total order over records <i>within</i> a partition, not between different partitions in a topic. Per-partition ordering combined with the ability to partition data by key is sufficient for most applications. However, if you require a total order over records this can be achieved with a topic that has only one partition, though this will mean only one consumer process per consumer group.
   </p>
   <h4><a id="intro_multi-tenancy" href="#intro_multi-tenancy">Multi-tenancy</a></h4>
-  <p>You can deploy Kafka as a multi-tenant solution. Multi-tenancy is enabled by configuring which topics can produce or consume data. There is also operations support for quotas.  Administrators can define and enforce quotas on requests to control the broker resources that are used by clients.  For more information, see the <a href="https://kafka.apache.org/documentation/#security">security documentation</a>. </p>
+  <p>You can deploy Kafka as a multi-tenant solution. Multi-tenancy is put into effect by configuring which producers and consumers can interact with particular topics in a cluster. There is also operations support for quotas.  Administrators can define and enforce quotas on requests to control the broker resources that are used by clients.  For more information, see the <a href="https://kafka.apache.org/documentation/#security">security documentation</a>. </p>
   <h4><a id="intro_guarantees" href="#intro_guarantees">Guarantees</a></h4>
   <p>
   At a high-level Kafka gives the following guarantees:
